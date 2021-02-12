@@ -1,0 +1,27 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+  pull_request:
+  workflow_dispatch:
+
+name: Build, Release and Upload Release Asset
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up git repo
+        uses: actions/checkout@v2
+
+      - name: Github Action for LaTeX
+        uses: xu-cheng/latex-action@v2
+        working-directory: compline
+        with:
+          root_file: compline.tex
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: true
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: compline/compline.pdf
+          path: complline/compline.pdf
