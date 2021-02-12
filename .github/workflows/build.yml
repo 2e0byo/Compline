@@ -4,7 +4,7 @@ on:
   pull_request:
   workflow_dispatch:
 
-name: Build, Release and Upload Release Asset
+name: Build and upload artifact
 
 jobs:
   build:

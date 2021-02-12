@@ -17,14 +17,17 @@ jobs:
       - name: Set up git repo
         uses: actions/checkout@v2
 
-      - name: Github Action for LaTeX
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: compline.tex
-          latexmk_use_lualatex: true
-          latexmk_shell_escape: true
-
+      - name: Install packages
+        run: |
+          sudo apt install texlive texlive-metapost texlive-lang-english texlive-lang-european texlive-latex-extra texlive-luatex gregorio latexmk
           
+      - name: Latex
+        run: |
+          sh .git-hook
+          cd compline
+          env openout_any=a latexmk --shell-escape --pdflatex=lualatex --pdf compline.tex
+          cd ../
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
