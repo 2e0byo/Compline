@@ -6,10 +6,6 @@ on:
 
 name: Build, Release and Upload Release Asset
 
-defaults:
-  run:
-    working-directory: compline
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,15 +13,23 @@ jobs:
       - name: Set up git repo
         uses: actions/checkout@v2
 
-      - name: Github Action for LaTeX
-        uses: xu-cheng/latex-action@v2
+      - name: Latex
+        uses: xu-cheng/texlive-action/full@v1
         with:
-          working_directory: compline
-          root_file: compline.tex
-          latexmk_use_lualatex: true
-          latexmk_shell_escape: true
+          run: |
+            cd compline
+            latexmk --shell-escape --latex=lualatex
+            cd ../
+            
+      # - name: Github Action for LaTeX
+      #   uses: xu-cheng/latex-action@v2
+      #   with:
+      #     working_directory: compline
+      #     root_file: compline.tex
+      #     latexmk_use_lualatex: true
+      #     latexmk_shell_escape: true
 
       - uses: actions/upload-artifact@v2
         with:
-          name: compline.pdf
-          path: compline.pdf
+          name: compline/compline.pdf
+          path: compline/compline.pdf
