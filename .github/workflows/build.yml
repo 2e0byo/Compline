@@ -8,7 +8,7 @@ name: Build, Release and Upload Release Asset
 
 defaults:
   run:
-    working-directory: compline
+    working_directory: compline
 
 jobs:
   build:
