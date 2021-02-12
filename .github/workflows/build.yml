@@ -13,12 +13,21 @@ jobs:
       - name: Set up git repo
         uses: actions/checkout@v2
 
+      # - name: Latex
+      #   run:
+      #     ls .git
+      #     .git/hooks/post-commit
+      #     sudo apt install texlive gregorio
+      #     cd compline
+      #     latexmk --shell-escape --pdflatex=lualatex --pdf compline.tex
+      #     cd ../
+
       - name: Latex
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
             cd compline
-            latexmk --shell-escape --pdflatex=lualatex --pdf
+            latexmk --shell-escape --pdflatex=lualatex --pdf compline.tex
             cd ../
             
       # - name: Github Action for LaTeX
