@@ -18,7 +18,7 @@ jobs:
         with:
           run: |
             cd compline
-            latexmk --shell-escape --latex=lualatex
+            latexmk --shell-escape --pdflatex=lualatex --pdf
             cd ../
             
       # - name: Github Action for LaTeX
