@@ -15,7 +15,7 @@ jobs:
 
       - name: Install packages
         run: |
-          sudo apt install texlive texlive-lang-other texlive-latex-extra texlive-luatex gregorio latexmk
+          sudo apt install texlive texlive-lang-all texlive-latex-extra texlive-luatex gregorio latexmk
           
       - name: Latex
         run: |
