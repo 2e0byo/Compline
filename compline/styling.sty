@@ -1,6 +1,6 @@
 % styling commands for liturgy booklets
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{st-cuthberts-styling}
+\ProvidesPackage{styling}
 \RequirePackage[autocompile]{gregoriotex} 
 % titlepage
 \newlength{\TPpreseriesskip}      %skip before series heading
@@ -11,7 +11,7 @@
 \setlength{\TPpresubtitleskip}{1.5\baselineskip}
 
 
-\newcommand{\TitlepageChurch}[3]{
+\newcommand{\Titlepage}[3]{
   % typeset the title page for liturgy booklets
   % First argument is title, second subtitle, third series heading
   \thispagestyle{empty}
