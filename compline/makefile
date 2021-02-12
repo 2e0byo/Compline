@@ -1,9 +1,7 @@
-cf=compline.tex
-cfp=compline.pdf
+compline.pdf: compline.tex
+	lualatex --shell-escape compline.tex
+	lualatex --shell-escape compline.tex
 
-ComplineLentFriday-book.pdf: $(cfp)
-	pdfbook $(cfp)
+.PHONY: all
 
-$(cfp): $(cf)
-	lualatex --shell-escape --interaction=batchmode $(cf)
-	lualatex --shell-escape --interaction=batchmode $(cf) #compile twice for layout reasons
+all: compline.pdf
