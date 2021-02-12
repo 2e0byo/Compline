@@ -8,7 +8,7 @@ name: Build, Release and Upload Release Asset
 
 defaults:
   run:
-    working_directory: compline
+    working-directory: compline
 
 jobs:
   build:
@@ -20,6 +20,7 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with:
+          working_directory: compline
           root_file: compline.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
