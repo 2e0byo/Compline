@@ -15,8 +15,7 @@ jobs:
 
       - name: Latex
         run: |
-          ls .git
-          .git/hooks/post-commit
+          .git-hook
           sudo apt install texlive gregorio
           cd compline
           latexmk --shell-escape --pdflatex=lualatex --pdf compline.tex
