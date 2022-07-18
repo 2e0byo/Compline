@@ -1,6 +1,5 @@
 compline.pdf: compline.tex
-	lualatex --shell-escape compline.tex
-	lualatex --shell-escape compline.tex
+	env openout_any=a latexmk --shell-escape --pdflatex=lualatex --pdf compline.tex
 
 .PHONY: all
 
