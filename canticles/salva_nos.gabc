@@ -1,6 +1,7 @@
 name:Salva nos Domine;
 office-part:Antiphona;
-mode:3a;
+mode:3;
+mode-differentia: a;
 book:The Liber Usualis, 1961, p. 271;
 transcriber:Andrew Hinkley;
 %%

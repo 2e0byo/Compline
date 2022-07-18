@@ -1,6 +1,7 @@
 name: 133-8G;
 initial-style: 0;
-annotation: 8.G;
+mode: 8;
+mode-differentia: G;
 user-notes: Psalm 133.;
 centering-scheme: latin;
 %%

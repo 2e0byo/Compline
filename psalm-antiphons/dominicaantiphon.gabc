@@ -1,6 +1,7 @@
 name:Miserere mihi;
 office-part:Antiphona;
-mode:8G;
+mode:8;
+mode-differentia: G;
 book:The Liber Usualis, 1961, p. 266;
 transcriber:Andrew Hinkley;
 %%

@@ -1,6 +1,7 @@
 name: Nunc dimittis-3a;
 initial-style: 0;
-annotation: 3.a ancient;
+mode: 3;
+mode-differentia: a;
 user-notes: Nunc dimittis.;
 centering-scheme: latin;
 %%
