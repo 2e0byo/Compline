@@ -1,4 +1,4 @@
-PHONY: all
+.PHONY: all
 
 all: compline.pdf compline-booklet.pdf
 
